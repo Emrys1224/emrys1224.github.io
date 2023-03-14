@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Korean Vocabulary Drill</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="vocab-drill.css">
+</head>
+
+<body>
+
+	<div class="container">
+
+		<h2>Korean Vocabulary Drill</h2>
+
+		<div id="mode-sel">
+			<div class="option-grp">
+				<label for="categories">Category</label>
+				<select id="categories" onchange="initialize()">
+					<option value="0">Numbers (Native Korean)</option>
+					<option value="1">Numbers (Sino-Korean)</option>
+					<option value="2">Parts of the Body</option>
+					<option value="3">Fruits</option>
+					<option value="4">Places</option>
+					<option value="5">Clothes</option>
+					<option value="6">People</option>
+					<option value="7">Name of Country</option>
+					<option value="8">Family</option>
+					<option value="9">Interogative Pronoun</option>
+					<option value="10">Transportation</option>
+					<option value="11">Personal Information</option>
+					<option value="12">Foods</option>
+					<option value="13">Furniture</option>
+					<option value="14">Industrial Terms</option>
+					<option value="15">Location</option>
+					<option value="16">Electrical Appliances</option>
+					<option value="17">Occupation</option>
+					<option value="18">Sports / Exercise</option>
+					<option value="19">Work Related Terms</option>
+					<option value="20">Adverb I</option>
+					<option value="21">Adverb II</option>
+					<option value="22">Places in Korea</option>
+					<option value="23">Words Related to Time</option>
+					<option value="24">Weather</option>
+				</select>
+			</div>
+			<div class="option-grp">
+				<label for="language">Given Word Language</label>
+				<select id="language" onchange="changeLang()">
+					<option value="kor">한글</option>
+					<option value="eng">English</option>
+				</select>
+			</div>
+			<div id="score-disp">
+				<label for="score">Correct answers at first try</label>
+				<p><span id="score">0</span> of <span id="total">0</span></p>
+			</div>
+		</div>
+
+		<div id="word-disp">
+			<p id="word-given"></p>
+			<p id="answer"></p>
+		</div>
+		<p id="ans-confirm"></p>
+
+		<div id="word-choices">
+			<div>
+				<button type="button" class="word-sel"></button>
+				<button type="button" class="word-sel"></button>
+			</div>
+			<div>
+				<button type="button" class="word-sel"></button>
+				<button type="button" class="word-sel"></button>
+			</div>
+		</div>
+
+		<div id="vocab-list"></div>
+
+		<div>
+			<button type="button" id="show-vocab-btn" onclick="showVocabList()">Show Vocabulary List</button>
+		</div>
+
+		<div>
+			<button type="button" id="nxt-btn"></button>
+		</div>
+
+	</div>
+
+	<script type="text/javascript" src="vocab-arr.js"></script>
+	<script type="text/javascript" src="vocab-drill.js"></script>
+
+</body>
+
+</html>
